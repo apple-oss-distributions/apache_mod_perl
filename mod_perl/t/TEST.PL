@@ -1,4 +1,3 @@
-#!/usr/local/bin/perl
 
 $|++;
 use Config;
@@ -50,7 +49,7 @@ if (@ARGV) {
 	print <<"EOM";
 $@
 I still can't find LWP::UserAgent, try:
-$^X -MCPAN -e install LWP
+$^X -MCPAN -e "install q{LWP}"
 
 		or
 
@@ -68,8 +67,8 @@ EOM
 }
 
 unshift @INC, '.';
-require Apache::test;
-Apache::test->import('simple_fetch');
+require Apache::testold;
+Apache::testold->import('simple_fetch');
 use subs 'simple_fetch';
 
 unless (simple_fetch "/test.html") {
