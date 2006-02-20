@@ -7,7 +7,7 @@ Project             = mod_perl
 UserType            = Administration
 ToolType            = Services
 ShadowTestFile      = $(BuildDirectory)/Makefile.PL
-Extra_CC_Flags      = -Wno-precomp
+Extra_CC_Flags      = 
 Extra_Environment   =	   SITELIBEXP="$(PERLLIB)"			\
 			  SITEARCHEXP="$(PERLARCHLIB)"			\
 		       INSTALLSITELIB="$(DSTROOT)$(PERLLIB)"		\
