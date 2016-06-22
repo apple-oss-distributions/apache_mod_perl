@@ -1,5 +1,5 @@
 Project        = mod_perl
-ProjectVersion = $(Project)-2.0.7
+ProjectVersion = $(Project)-2.0.9
 
 include $(MAKEFILEPATH)/CoreOS/ReleaseControl/Common.make
 
@@ -9,7 +9,7 @@ VERSIONERDIR = /usr/local/versioner
 PERLVERSIONS = $(VERSIONERDIR)/perl/versions
 DEFAULT := $(shell sed -n '/^DEFAULT = /s///p' $(PERLVERSIONS))
 KNOWNVERSIONS := $(shell grep -v '^DEFAULT' $(PERLVERSIONS))
-BOOTSTRAPPERL = 5.16
+BOOTSTRAPPERL = 5.18
 VERSIONS = $(sort $(KNOWNVERSIONS) $(BOOTSTRAPPERL))
 # do default version last
 PERLORDEREDVERS = $(filter-out $(DEFAULT),$(VERSIONS)) $(DEFAULT)
